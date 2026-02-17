@@ -6,8 +6,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class CadastroSpringApplication {
 
-    public static void main(String[] args) {
-        SpringApplication.run(CadastroSpringApplication.class, args);
-    }
+    public static void main(String[] args) {SpringApplication.run(CadastroSpringApplication.class, args);}
 
 }
