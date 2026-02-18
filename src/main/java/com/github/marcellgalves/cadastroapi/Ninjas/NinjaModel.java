@@ -2,6 +2,8 @@ package com.github.marcellgalves.cadastroapi.Ninjas;
 
 import com.github.marcellgalves.cadastroapi.Missoes.MissoesModel;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -20,7 +22,10 @@ public class NinjaModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotBlank (message = "O nome não pode ser vazio.")
     private String name;
+
+    @Email (message = "O email deve ser válido. ")
     private String email;
     private int age;
 
