@@ -1,15 +1,12 @@
-package com.github.marcellgalves.cadastroapi.Ninjas;
+package com.github.marcellgalves.cadastroapi.models;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.github.marcellgalves.cadastroapi.Missoes.MissoesModel;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.util.List;
 
 // Entity -- Class -> Entity
 @Entity

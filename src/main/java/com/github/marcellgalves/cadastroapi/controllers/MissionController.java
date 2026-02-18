@@ -1,10 +1,8 @@
 package com.github.marcellgalves.cadastroapi.controllers;
 
 
-import com.github.marcellgalves.cadastroapi.Missoes.MissoesModel;
-import com.github.marcellgalves.cadastroapi.Ninjas.NinjaModel;
+import com.github.marcellgalves.cadastroapi.models.MissoesModel;
 import com.github.marcellgalves.cadastroapi.services.MissionService;
-import com.github.marcellgalves.cadastroapi.services.NinjaService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

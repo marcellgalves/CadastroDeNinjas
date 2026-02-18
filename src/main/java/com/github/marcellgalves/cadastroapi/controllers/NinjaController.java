@@ -1,6 +1,6 @@
 package com.github.marcellgalves.cadastroapi.controllers;
 
-import com.github.marcellgalves.cadastroapi.Ninjas.NinjaModel;
+import com.github.marcellgalves.cadastroapi.models.NinjaModel;
 import com.github.marcellgalves.cadastroapi.services.NinjaService;
 import org.springframework.web.bind.annotation.*;
 
@@ -47,11 +47,5 @@ public class NinjaController {
     public void deletarNinja(@PathVariable Long id) {
         service.deletarNinja(id);
     }
-
-
-
-
-
-
 
 }

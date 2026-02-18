@@ -1,7 +1,7 @@
 package com.github.marcellgalves.cadastroapi.services;
 
-import com.github.marcellgalves.cadastroapi.Missoes.MissoesModel;
-import com.github.marcellgalves.cadastroapi.Ninjas.NinjaModel;
+import com.github.marcellgalves.cadastroapi.models.MissoesModel;
+import com.github.marcellgalves.cadastroapi.exceptions.MissionNotFoundException;
 import com.github.marcellgalves.cadastroapi.repository.MissionRepository;
 import org.springframework.stereotype.Service;
 
@@ -44,7 +44,7 @@ public class MissionService {
             missaoAtualizada.setId(id); // ESSA LINHA É A CHAVE! Dizemos ao objeto qual ID ele deve assumir
             return missionRepository.save(missaoAtualizada); // O .save() agora fará um UPDATE
         } else {
-            throw new RuntimeException("Ninja não encontrado para atualizar.");
+            throw new MissionNotFoundException("Ninja não encontrado para atualizar.");
         }
     }
 }

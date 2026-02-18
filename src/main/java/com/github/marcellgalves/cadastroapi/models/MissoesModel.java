@@ -1,7 +1,6 @@
-package com.github.marcellgalves.cadastroapi.Missoes;
+package com.github.marcellgalves.cadastroapi.models;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
-import com.github.marcellgalves.cadastroapi.Ninjas.NinjaModel;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;

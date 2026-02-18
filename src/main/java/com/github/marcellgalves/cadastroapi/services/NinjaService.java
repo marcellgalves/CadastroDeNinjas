@@ -1,6 +1,7 @@
 package com.github.marcellgalves.cadastroapi.services;
 
-import com.github.marcellgalves.cadastroapi.Ninjas.NinjaModel;
+import com.github.marcellgalves.cadastroapi.models.NinjaModel;
+import com.github.marcellgalves.cadastroapi.exceptions.NinjaNotFoundException;
 import com.github.marcellgalves.cadastroapi.repository.NinjaRepository;
 import org.springframework.stereotype.Service;
 
@@ -43,7 +44,7 @@ public class NinjaService{
             ninjaAtualizado.setId(id); // ESSA LINHA É A CHAVE! Dizemos ao objeto qual ID ele deve assumir
             return ninjaRepository.save(ninjaAtualizado); // O .save() agora fará um UPDATE
         } else {
-            throw new RuntimeException("Ninja não encontrado para atualizar.");
+            throw new NinjaNotFoundException("Ninja não encontrado com o ID: " + id);
         }
     }
 }
