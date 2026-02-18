@@ -1,5 +1,6 @@
 package com.github.marcellgalves.cadastroapi.Ninjas;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.github.marcellgalves.cadastroapi.Missoes.MissoesModel;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
@@ -32,6 +33,7 @@ public class NinjaModel {
      // @ManyToOne - um ninja tem uma única missão.
     @ManyToOne
     @JoinColumn(name = "missoes_id") // Foreing Key ou chave estrangeira.
+    @JsonBackReference
     private MissoesModel missoes;
 
 }
