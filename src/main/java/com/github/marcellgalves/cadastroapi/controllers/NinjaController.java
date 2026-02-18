@@ -28,7 +28,7 @@ public class NinjaController {
 
      // READ
     @GetMapping("/show/{id}")
-    public Optional<NinjaModel> buscarPorId(@PathVariable Long id){
+    public NinjaModel buscarPorId(@PathVariable Long id){
         return service.buscarPorId(id);
     }
      @GetMapping("/list-all")

@@ -29,7 +29,7 @@ public class MissionController {
 
     // READ
     @GetMapping("/show/{id}")
-    public Optional<MissoesModel> buscarPorId(@PathVariable Long id){
+    public MissoesModel buscarPorId(@PathVariable Long id){
         return service.buscarPorId(id);
     }
     @GetMapping("/list-all")
